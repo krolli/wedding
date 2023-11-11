@@ -1,8 +1,10 @@
+html {
+}
+
 body {
+	background-image: linear-gradient(#F9E1E0, #FEADB9, #BC85A3, #9799BA, #BC85A3);
 	margin: 0px;
 	padding: 0px;
-	background-color: skyblue;
-
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: center;
@@ -16,30 +18,37 @@ section {
 	margin: 0px;
 	border: 0px;
 	padding: 0px;
-	background-color: powderblue;
 }
-
 @media screen and (min-width: 530px) {
 	section {
-/*		margin: 0px auto;*/
 		width: 90%;
 	}
 }
-
 @media screen and (min-width: 640px) {
 	section {
-/*		margin: 0px auto;*/
 		width: 75%;
 	}
 }
-
 section > h1,h2 {
 	text-align: center;
 }
 
-.gallery-selection {
-	min-height: calc(100vh - 200px);
-	background-color: lightsalmon;
+.intro-card {
+	align-items: center;
+}
+@media screen {
+	.intro-card > h1 {
+		background-image: url(media/logo.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		flex-grow: 1;
+		width: 100%;
+		max-width: 2082px;
+		max-height: 2223px;
+		color: transparent;
+		user-select: none;
+	}
 }
 
 .gallery {
@@ -47,13 +56,33 @@ section > h1,h2 {
 	flex-flow: row nowrap;
 	overflow-x: scroll;
 }
-
-.gallery > img {
+.gallery > a > img {
 	object-fit: contain;
 	max-height: 150px;
 	margin: 5px;
 }
+.gallery > a:focus > img {
+	opacity: 0.5;
+}
+.gallery-selection {
+	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+	/*align-items: center;*/
+	max-height: 100%;
+}
+.gallery-selection > div {
+	display: none;
+	background-color: lightsalmon;
+}
+.gallery-selection > div:target {
+	display: block;
+}
 
 iframe {
 	flex-grow: 1;
+	/*
+	width: 640px;
+	height: 480px;
+	*/
 }
