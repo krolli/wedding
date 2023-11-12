@@ -63,3 +63,17 @@ Note: The `overflow` property only works for block elements with a specified hei
 The `display` property specifies the display behavior (the type of rendering box) of an element.
 
 In HTML, the default display property value is taken from the HTML specifications or from the browser/user default style sheet. The default value in XML is inline, including SVG elements.
+
+# flexbox
+- Main axis
+	- Axis following flex direction (horizontal axis for row direction, vertical axis for column direction).
+- Cross axis
+	- Axis perpendicular to main axis.
+- `justify-content`
+	- Placement of flex items along main axis.
+	- values: flex-start, flex-end, center, space-between, space-around, space-evenly
+- `align-items`
+	- Placement and sizing of flex items along cross axis.
+	- values: normal, stretch, center, flex-start, flex-end, start, end, baseline
+- `align-content`
+	- Placement and sizing of flex lines along cross axis.
