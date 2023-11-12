@@ -54,63 +54,63 @@ section > h1,h2 {
 .gallery {
 	display: flex;
 	flex-direction: row;
-	flex-wrap: nowrap;
-	overflow-x: scroll;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	overflow: auto;
+}
+.gallery > a {
+	margin: 10px;
+	max-height: 150px;
+	border-radius: 5px;
+	overflow: hidden;
+	box-shadow: 0 0 0 3px white, 0 5px 8px 3px rgba(0, 0, 0, 0.6);
 }
 .gallery > a > img {
-	object-fit: contain;
 	max-height: 150px;
-	margin: 5px;
+	object-fit: contain;
 }
-.gallery > a:focus > img {
-	opacity: 0.5;
-}
-.gallery-selection {
-	flex-grow: 1;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-items: stretch;
-	/*debug*/
-/*	background-color: red;*/
-}
-.gallery-selection > div {
+
+.lightbox {
 	display: none;
 }
-.gallery-selection > div:target {
-	max-width: 100%;
-	max-height: 100%;
-	flex-grow: 1;
+a.lightbox {
+	text-decoration: none;
+	color: inherit;
+}
+.lightbox:target {
+	position: fixed;
+	background: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
 	justify-content: center;
 	align-items: center;
-	position: relative;
 	z-index: 0;
-	/*debug*/
-/*	background-color: green;*/
 }
-.gallery-selection > div > img {
+.lightbox > picture {
+	max-width: 100%;
+	max-height: 100%;
+	position: absolute;
+	z-index: -1;
+}
+.lightbox > picture > img {
 	max-width: 100%;
 	max-height: 100%;
 	object-fit: contain;
-	position: absolute;
-	z-index: -1;
-	/*debug*/
-/*	background-color: blue;*/
-/*	opacity: 0.5;*/
 }
-.gallery-selection > div > div {
+.lightbox > div {
 	flex-grow: 1;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
 	justify-content: flex-end;
 	align-items: center;
-	/*debug*/
-/*	background-color: lightblue;*/
 }
 
 iframe {
