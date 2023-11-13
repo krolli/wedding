@@ -86,23 +86,30 @@ a.lightbox {
 	height: 100%;
 	left: 0;
 	top: 0;
+	padding: 80px;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
 	justify-content: center;
 	align-items: center;
 	z-index: 0;
+	box-sizing: border-box;
 }
 .lightbox > picture {
+	display: flex;
 	max-width: 100%;
 	max-height: 100%;
 	position: absolute;
 	z-index: -1;
+	border-radius: 5px;
+	overflow: hidden;
+	box-shadow: 0 0 0 3px white, 0 5px 8px 3px rgba(0, 0, 0, 0.6);
+	box-sizing: border-box;
 }
 .lightbox > picture > img {
 	max-width: 100%;
 	max-height: 100%;
-	object-fit: contain;
+	object-fit: cover;
 }
 .lightbox > div {
 	flex-grow: 1;
