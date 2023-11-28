@@ -5,182 +5,112 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Svadobný web</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
-	<!--
-	<link rel="icon" type="image/x-icon" href="media/nutcracker.webp">
-	-->
+	<link rel="icon" type="image/x-icon" href="media/favicon.ico">
 </head>
 
 <body>
 
-<section class="intro-card">
+<section id="intro-card">
 	<h1>Kateřina & Martin</h1>
-	<div style="font-style: italic;">vám s radostí oznamují</div>
-	<h2 style="text-transform: uppercase; letter-spacing: 0.6em;">budeme se brát</h2>
-	<h3>13. 4. 2024</h3>
+	<span>se budou brát</span>
+	<span class="date">13. 4. 2024</span>
 </section>
 
 <section id="story">
 	<h2>Náš příběh</h2>
-	<p>Setkali se 20. 1. 2022 a od té doby jsou šťastni.</p>
+	<p>Setkali sme se 20. 1. 2022 a od té doby jsme šťastni.</p>
 
 	<div class="gallery">
-		<!-- <a href="#img-panorama"><img src="media/IMG_20221002_112532.jpg"></a> -->
-		<a href="#img-falls2"><img src="https://www.w3schools.com/w3images/falls2.jpg"></a>
-		<a href="#img-mist"><img src="https://www.w3schools.com/w3images/mist.jpg"></a>
-		<a href="#img-rocks"><img src="https://www.w3schools.com/w3images/rocks.jpg"></a>
-		<a href="#img-mountainskies"><img src="https://www.w3schools.com/w3images/mountainskies.jpg"></a>
-		<a href="#img-nature"><img src="https://www.w3schools.com/w3images/nature.jpg"></a>
-		<a href="#img-ocean"><img src="https://www.w3schools.com/w3images/ocean.jpg"></a>
-		<a href="#img-paris"><img src="https://www.w3schools.com/w3images/paris.jpg"></a>
-		<a href="#img-underwater"><img src="https://www.w3schools.com/w3images/underwater.jpg"></a>
-		<a href="#img-wedding"><img src="https://www.w3schools.com/w3images/wedding.jpg"></a>
+		<a href="#img-innsbruck"><img src="media/innsbruck-400.webp"></a>
+		<a href="#img-oscadnica"><img src="media/oscadnica-400.webp"></a>
+		<a href="#img-rysy"><img src="media/rysy-400.webp"></a>
+		<a href="#img-corgitrek"><img src="media/corgitrek-400.webp"></a>
 	</div>
 
-	<!--
-	<a class="lightbox" href="#story" id="img-panorama">
+	<a class="lightbox" href="#story" id="img-innsbruck">
 		<picture>
-			<img src="media/IMG_20221002_112532.jpg">
+			<img src="media/innsbruck-full.jpg">
 		</picture>
 		<div>
-			<h3>Panorama</h3>
+			<h3>Innsbruck</h3>
 			<p>One of our trips</p>
 		</div>
 	</a>
-	-->
-	<a class="lightbox" href="#story" id="img-falls2">
+	<a class="lightbox" href="#story" id="img-oscadnica">
 		<picture>
-			<img src="https://www.w3schools.com/w3images/falls2.jpg">
+			<img src="media/oscadnica-full.jpg">
 		</picture>
 		<div>
-			<h3>Falls 2</h3>
+			<h3>Oscadnica</h3>
 			<p>Some more text</p>
 		</div>
 	</a>
-	<a class="lightbox" href="#story" id="img-mist">
+	<a class="lightbox" href="#story" id="img-rysy">
 		<picture>
-			<img src="https://www.w3schools.com/w3images/mist.jpg">
+			<img src="media/rysy-full.jpg">
 		</picture>
 		<div>
-			<h3>Mist</h3>
+			<h3>Rysy</h3>
 			<p>Some more text</p>
 		</div>
 	</a>
-	<a class="lightbox" href="#story" id="img-rocks">
+	<a class="lightbox" href="#story" id="img-corgitrek">
 		<picture>
-			<img src="https://www.w3schools.com/w3images/rocks.jpg">
+			<img src="media/corgitrek-full.jpg">
 		</picture>
 		<div>
-			<h3>Rocks</h3>
-			<p>Some more text</p>
-		</div>
-	</a>
-	<a class="lightbox" href="#story" id="img-mountainskies">
-		<picture>
-			<img src="https://www.w3schools.com/w3images/mountainskies.jpg">
-		</picture>
-		<div>
-			<h3>Mountain skies</h3>
-			<p>Some more text</p>
-		</div>
-	</a>
-	<a class="lightbox" href="#story" id="img-nature">
-		<picture>
-			<img src="https://www.w3schools.com/w3images/nature.jpg">
-		</picture>
-		<div>
-			<h3>Nature</h3>
-			<p>Some more text</p>
-		</div>
-	</a>
-	<a class="lightbox" href="#story" id="img-ocean">
-		<picture>
-			<img src="https://www.w3schools.com/w3images/ocean.jpg">
-		</picture>
-		<div>
-			<h3>Ocean</h3>
-			<p>Some more text</p>
-		</div>
-	</a>
-	<a class="lightbox" href="#story" id="img-paris">
-		<picture>
-			<img src="https://www.w3schools.com/w3images/paris.jpg">
-		</picture>
-		<div>
-			<h3>Paris</h3>
-			<p>Some more text</p>
-		</div>
-	</a>
-	<a class="lightbox" href="#story" id="img-underwater">
-		<picture>
-			<img src="https://www.w3schools.com/w3images/underwater.jpg">
-		</picture>
-		<div>
-			<h3>Underwater</h3>
-			<p>Some more text</p>
-		</div>
-	</a>
-	<a class="lightbox" href="#story" id="img-wedding">
-		<picture>
-			<img src="https://www.w3schools.com/w3images/wedding.jpg">
-		</picture>
-		<div>
-			<h3>Wedding</h3>
+			<h3>Corgitrek</h3>
 			<p>Some more text</p>
 		</div>
 	</a>
 </section>
 
-<section id="maps">
-	<h2>Obrad</h2>
-	<p>Obrad sa bude konať v Kostele Nejsvětější Trojice Hospitalu Kuks.</p>
-	<iframe
-		src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000.3468441189566!2d15.886894676999047!3d50.39749257158214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470e87b4607f9ad5%3A0x91204f8b0959ed39!2sHospit%C3%A1l%20Kuks!5e1!3m2!1ssk!2scz!4v1698733723482!5m2!1ssk!2scz"
-		style="border:0;"
-		allowfullscreen=""
-		loading="lazy"
-		referrerpolicy="no-referrer-when-downgrade"
-	>
-	</iframe>
-	<h2>Hostina</h2>
-	<p>Hostina sa bude konať na Fare v Dubenci.</p>
-	<iframe
-		src="https://www.google.com/maps/embed?pb=!1m17!1m11!1m3!1d941.8263130377863!2d15.810408500252773!3d50.37158399924748!2m2!1f0!2f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470e869fe6df3e4d%3A0xa9813d4b32b346bc!2sFara%20v%20Dubenci!5e1!3m2!1ssk!2scz!4v1698733648717!5m2!1ssk!2scz"
-		style="border:0;"
-		allowfullscreen=""
-		loading="lazy"
-		referrerpolicy="no-referrer-when-downgrade"
-	>
-	</iframe>
-</section>
+<section id="info">
+	<div>
+		<h2>Informace</h2>
+		<p>Vše se nachází v okolí Dvoru Králové nad Labem, pro přesun ale doporučujeme mít auto. S parkováním by neměli být žádné potíže.</p>
+	</div>
 
-<section>
-	<h2>Informácie k doprave a ubytovaniu</h2>
-	<p>Pokud budete potřebovat pomoc s dopravou na Farmu, obraťte se na nás. Volejte Adéle na tel.: 777 777 777</p>
-	<p>Parkovat můžete přímo v areálu farmy.</p>
-	<p>Ubytování je zajištěno rovněž přímo na Farmě. Dejte nám vědět, že ho využijete  a kolik Vás bude. Přejdětě na formulář nebo ještě nakoukněte na tipy na dárky...</p>
-	<button type="button" class="btn">Na formulár</button>
-</section>
+	<div>
+		<h2>Obřad</h2>
+		<p>Obřad se bude konat v <a href="https://www.hospital-kuks.cz/cs/">hospitálu Kuks</a>, v klášterním kostele Nejsvětější Trojice. Parkovat lze u Hospody Na sýpce, která se nacházi hned vedle hospitálu. Pokud by u hospody již nebylo místo, ve vesničce Kuks je placené parkovište (60Kč na celý den) odkud se pěšky dostanete do hospitálu za přibližne 15 minut. Doporučujeme nechat si časovou rezervu, kterou pak můžete využít i na prohlídku dvora a zahrad hospitálu.</p>
+		<iframe
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000.3468441189566!2d15.886894676999047!3d50.39749257158214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470e87b4607f9ad5%3A0x91204f8b0959ed39!2sHospit%C3%A1l%20Kuks!5e1!3m2!1ssk!2scz!4v1698733723482!5m2!1ssk!2scz"
+			style="border:0;"
+			allowfullscreen=""
+			loading="lazy"
+			referrerpolicy="no-referrer-when-downgrade"
+		>
+		</iframe>
+	</div>
 
-<section>
-	<h2>Program</h2>
-	<ol>
-		<li>14:00 - obrad</li>
-		<li>15:00 - fotenie</li>
-		<li>15:30 - presun do penziónu</li>
-		<li>16:00 - zahájenie zábavy</li>
-		<li>18:00 - krájanie torty</li>
-		<li>19:00 - prvý tanec</li>
-	</ol>
-</section>
+	<div>
+		<h2>Hostina</h2>
+		<p>Hostina se bude konat v <a href="https://penzionnafare.cz/">Penzionu na Faře</a> v Dubenci. Cesta z Kuksu trvá autem přibližne 20 minut. Pokud máte zájem o ubytování v penzionu, dejte nám vědet prostřednictvím dotazníku.</p>
+		<iframe
+			src="https://www.google.com/maps/embed?pb=!1m17!1m11!1m3!1d941.8263130377863!2d15.810408500252773!3d50.37158399924748!2m2!1f0!2f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470e869fe6df3e4d%3A0xa9813d4b32b346bc!2sFara%20v%20Dubenci!5e1!3m2!1ssk!2scz!4v1698733648717!5m2!1ssk!2scz"
+			style="border:0;"
+			allowfullscreen=""
+			loading="lazy"
+			referrerpolicy="no-referrer-when-downgrade"
+		>
+		</iframe>
+	</div>
 
-<section>
-	<h2>Tipy na darčeky</h2>
-	<p>Nakŕmte prasiatko. :)</p>
-</section>
-
-<section>
-	<h2>Svadobné menu</h2>
-	<p>Bude doplnené...</p>
+	<div>
+		<h2>Program</h2>
+		<p>Obřad sa bude začínat v 14:00. Časový harmonogram hostiny a zábavy bude ješte upřesněn.</p>
+		<!--
+		<ol>
+			<li>14:00 - obřad</li>
+			<li>15:00 - focení</li>
+			<li>15:30 - přesun do penziónu</li>
+			<li>16:00 - zahájení zábavy</li>
+			<li>18:00 - krájení dortu</li>
+			<li>19:00 - první tanec</li>
+		</ol>
+		-->
+	</div>
 </section>
 
 </body>

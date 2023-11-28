@@ -1,77 +1,110 @@
+:root {
+	--gradient-0: #F9E1E0;
+	--gradient-1: #FEADB9;
+	--gradient-2: #BC85A3;
+	--gradient-3: #9799BA;
+	--gradient-4: #BC85A3;
+	--gold-text: #AE7340;
+
+	--lighter-bg-color: var(--gradient-0);
+	--lighter-text-color: var(--gold-text);
+	--darker-bg-color: var(--gradient-1);
+
+	/*
+	dimensions:
+		phone:
+			width  360px .. 530px
+			height 760px .. 926px
+		tablet:
+			width  800px .. 810px
+			height 1080px .. 1280px
+
+	width=360px is minimum width for single-column layout.
+	width=530px is maximum width of phones where single-column is probably preferred.
+	width=720px can be breakpoint for switching to two-column layout. This should
+	use two columns on both portrait tablets and landscape phones.
+	*/
+}
+
 html {
 }
 
 body {
-	background-image: linear-gradient(#F9E1E0, #FEADB9, #BC85A3, #9799BA, #BC85A3);
 	margin: 0px;
 	padding: 0px;
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: center;
-
-	color: #AE7340;
-	text-shadow: 0px 0px 5px #FFFFFF, 2px 2px 5px #FFFFFF;
+	color: var(--lighter-text-color);
+	background-color: var(--lighter-bg-color);
 }
 
 section {
-	display: flex;
-	flex-flow: column nowrap;
-	min-height: 100vh;
 	width: 100%;
+	max-width: 950px;
 	margin: 0px;
 	border: 0px;
 	padding: 0px;
-}
-@media screen and (min-width: 530px) {
-	section {
-		width: 90%;
-	}
-}
-@media screen and (min-width: 640px) {
-	section {
-		width: 75%;
-	}
 }
 section > h1,h2 {
 	text-align: center;
 }
 
-.intro-card {
+#intro-card {
+	display: flex;
+	flex-flow: column nowrap;
 	align-items: center;
+	min-height: 100vh;
+	max-height: 100vh;
 }
-@media screen {
-	.intro-card > h1 {
-		background-image: url(media/logo.png);
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: contain;
-		flex-grow: 1;
-		width: 100%;
-		max-width: 2082px;
-		max-height: 2223px;
-		color: transparent;
-		text-shadow: none;
-		user-select: none;
-	}
+#intro-card > h1 {
+	background-image: url(media/logo.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	flex-grow: 1;
+	width: 100%;
+	max-width: 2082px;
+	max-height: 2223px;
+	color: transparent;
+	text-shadow: none;
+	user-select: none;
+}
+#intro-card > span {
+	display: block;
+	text-transform: uppercase;
+	font-size: 25px;
+	letter-spacing: 0.4em;
+	margin: 0.5em;
+}
+#intro-card > span.date {
+	font-weight: bold;
 }
 
+#story {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+}
 .gallery {
+	max-width: 950px;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	overflow: auto;
 }
 .gallery > a {
-	margin: 10px;
-	max-height: 150px;
+	text-decoration: none;
+	margin: 4px 11px 16px 4px;
+}
+.gallery > a > img {
+/*	max-height: 150px;*/
+	max-height: min(40vw, 400px);
+	object-fit: contain;
 	border-radius: 5px;
 	overflow: hidden;
 	box-shadow: 0 0 0 3px white, 0 5px 8px 3px rgba(0, 0, 0, 0.6);
-}
-.gallery > a > img {
-	max-height: 150px;
-	object-fit: contain;
 }
 
 .lightbox {
@@ -124,24 +157,41 @@ a.lightbox {
 	align-items: center;
 }
 
-#maps {
-	display: grid;
-	column-gap: 1em;
-	grid-auto-flow: column;
-	grid-template-columns: 100%;
-	grid-template-rows: max-content max-content auto max-content max-content auto;
+#info {
+	display: flex;
+	flex-flow: column nowrap;
 }
-@media screen and (min-width: 900px) {
-	#maps {
-		grid-template-columns: 50% 50%;
-		grid-template-rows: max-content max-content auto;
-	}
+#info > div {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
 }
-
-#maps > iframe {
+#info > div > iframe {
 	width: 90%;
-	height: 90%;
-	margin: auto;
+	max-width: 640px;
+	aspect-ratio: 4/3;
 	border-radius: 5px;
 	box-shadow: 0 0 0 3px white, 0 5px 8px 3px rgba(0, 0, 0, 0.6);
+	margin: calc(8px + 3px + 5px);
+}
+
+@media (min-width: 720px) {
+	section {
+		width: calc(100% - 2em);
+	}
+	#info {
+		display: grid;
+		column-gap: 1em;
+		grid-template-columns: calc(50% - 0.5em) calc(50% - 0.5em);
+		grid-template-rows: max-content max-content max-content;
+	}
+	#info > div:first-child {
+		grid-column: 1 / span 2;
+	}
+	#info > div:last-child {
+		grid-column: 1 / span 2;
+	}
+	#info > div > p {
+		flex-grow: 1;
+	}
 }
