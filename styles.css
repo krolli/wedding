@@ -53,6 +53,7 @@ section > h1,h2 {
 #intro-card {
 	display: flex;
 	flex-flow: column nowrap;
+	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
 	max-height: 100vh;
@@ -62,10 +63,11 @@ section > h1,h2 {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
-	flex-grow: 1;
 	width: 100%;
 	max-width: 2082px;
-	max-height: 2223px;
+	max-height: 75vh;
+	aspect-ratio: 2082 / 2223;
+	margin: 0;
 	color: transparent;
 	text-shadow: none;
 	user-select: none;
@@ -76,6 +78,7 @@ section > h1,h2 {
 	font-size: 25px;
 	letter-spacing: 0.4em;
 	margin: 0.5em;
+	text-align: center;
 }
 #intro-card > span.date {
 	font-weight: bold;
