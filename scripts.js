@@ -20,6 +20,10 @@ const photos = {
 };
 
 function onDocumentLoad(event) {
+	const mediaQuery = window.matchMedia('screen');
+	if (!mediaQuery.matches)
+		return;
+
 	const lightbox = document.getElementById('lightbox');
 
 	function onGalleryPhotoClick(event) {

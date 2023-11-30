@@ -1,4 +1,6 @@
 :root {
+	--max-content-width: 950px;
+
 	--gradient-0: #F9E1E0;
 	--gradient-1: #FEADB9;
 	--gradient-2: #BC85A3;
@@ -41,7 +43,7 @@ body {
 
 section {
 	width: 100%;
-	max-width: 950px;
+	max-width: var(--max-content-width);
 	margin: 0px;
 	border: 0px;
 	padding: 0px;
@@ -58,19 +60,17 @@ section > h1,h2 {
 	min-height: 100vh;
 	max-height: 100vh;
 }
-#intro-card > h1 {
-	background-image: url(media/logo.png);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
+#intro-card > picture {
 	width: 100%;
-	max-width: 2082px;
+	max-width: var(--max-content-width);
 	max-height: 75vh;
-	aspect-ratio: 2082 / 2223;
+	aspect-ratio: 950 / 1014;
 	margin: 0;
-	color: transparent;
-	text-shadow: none;
-	user-select: none;
+}
+#intro-card > picture > source, #intro-card > picture > img {
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: contain;
 }
 #intro-card > span {
 	display: block;
@@ -90,7 +90,7 @@ section > h1,h2 {
 	align-items: center;
 }
 .gallery {
-	max-width: 950px;
+	max-width: var(--max-content-width);
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;

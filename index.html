@@ -4,14 +4,19 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Svadobný web</title>
-	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="styles.css">
 	<link rel="icon" type="image/x-icon" href="media/favicon.ico">
 </head>
 
 <body>
 
 <section id="intro-card">
-	<h1>Kateřina & Martin</h1>
+	<picture>
+		<source srcset="media/logo-w950.webp" width="950" height="1014" media="(min-width:701px)" type="image/webp">
+		<source srcset="media/logo-w700.webp" width="700" height="747" media="(min-width:531px)" type="image/webp">
+		<source srcset="media/logo-w530.webp" width="530" height="566" media="(min-width:401px)" type="image/webp">
+		<img src="media/logo-w400.webp" width="400" height="427">
+	</picture>
 	<span>se budou brát</span>
 	<span class="date">13. 4. 2024</span>
 </section>
