@@ -3,19 +3,19 @@
 const photos = {
 	innsbruck: {
 		title: "Innsbruck",
-		text: "One of our trips",
+		text: "Naše první společná dovolená.",
 	},
 	oscadnica: {
-		title: "Oscadnica",
-		text: "Some more text",
+		title: "Oščadnica",
+		text: "Zimní nádhera na snowboardech.",
 	},
 	rysy: {
 		title: "Rysy",
-		text: "Some more text",
+		text: "Cesta, která nás v mnohem otestovala.",
 	},
 	corgitrek: {
 		title: "Corgi Trek",
-		text: "Some more text",
+		text: "Závod s naším krátkonohým parťákem.",
 	},
 };
 
