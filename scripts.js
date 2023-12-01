@@ -24,6 +24,7 @@ function onDocumentLoad(event) {
 	if (!mediaQuery.matches)
 		return;
 
+	const body = document.body;
 	const lightbox = document.getElementById('lightbox');
 
 	function onGalleryPhotoClick(event) {
@@ -33,6 +34,7 @@ function onDocumentLoad(event) {
 		const photoId = event.target.attributes['data-photo'].value;
 		const photo = photos[photoId];
 
+		body.classList.add("modal-background");
 		lightbox.classList.add("visible");
 		lightbox.innerHTML = `
 			<picture>
@@ -50,6 +52,7 @@ function onDocumentLoad(event) {
 		event.preventDefault();
 
 		lightbox.classList.remove("visible");
+		body.classList.remove("modal-background");
 	}
 
 	lightbox.addEventListener('click', onLightboxClick);

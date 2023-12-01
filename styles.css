@@ -107,9 +107,10 @@ section > h1,h2 {
 	cursor: pointer;
 }
 
-.lightbox {
-	display: none;
+.modal-background {
+	overflow: hidden;
 }
+
 #lightbox {
 	display: none;
 }
