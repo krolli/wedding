@@ -40,10 +40,8 @@ function onDocumentLoad(event) {
 			<picture>
 				<img src="media/${photoId}-full.jpg">
 			</picture>
-			<div>
-				<h3>${photo.title}</h3>
-				<p>${photo.text}</p>
-			</div>
+			<h3>${photo.title}</h3>
+			<p>${photo.text}</p>
 		`;
 	}
 
