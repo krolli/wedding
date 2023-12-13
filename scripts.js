@@ -11,7 +11,7 @@ const photos = {
 	},
 	rysy: {
 		title: "Rysy",
-		text: "Cesta, která nás v mnohem otestovala.",
+		text: "Cesta, která nás v mnohém otestovala.",
 	},
 	corgitrek: {
 		title: "Corgi Trek",
