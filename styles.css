@@ -26,6 +26,8 @@
 	width=720px can be breakpoint for switching to two-column layout. This should
 	use two columns on both portrait tablets and landscape phones.
 	*/
+
+	--form-field-gap: 0.3rem;
 }
 
 html {
@@ -50,6 +52,11 @@ section {
 }
 section > h1,h2 {
 	text-align: center;
+}
+@media (min-width: 720px) {
+	section {
+		width: calc(100% - 2em);
+	}
 }
 
 #intro-card {
@@ -165,11 +172,7 @@ section > h1,h2 {
 	box-shadow: 0 0 0 3px white, 0 5px 8px 3px rgba(0, 0, 0, 0.6);
 	margin: calc(8px + 3px + 5px);
 }
-
 @media (min-width: 720px) {
-	section {
-		width: calc(100% - 2em);
-	}
 	#info {
 		display: grid;
 		column-gap: 1em;
@@ -184,5 +187,60 @@ section > h1,h2 {
 	}
 	#info > div > p {
 		flex-grow: 1;
+	}
+}
+
+#form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#form > form {
+	width: fit-content;
+	display: grid;
+	row-gap: var(--form-field-gap);
+	column-gap: var(--form-field-gap);
+	grid-template-rows: max-content;
+	grid-template-columns: max-content;
+}
+#form > form > label {
+	width: min(100vw, 20rem);
+}
+#form > form > label.label-block > * {
+	display: block;
+	box-sizing: border-box;
+	width: min(100vw, 20rem);
+}
+#form > form > input[type=submit] {
+	box-sizing: border-box;
+	width: min(100vw, 10rem);
+	justify-self: center;
+}
+#form > form > label > textarea {
+	resize: vertical;
+}
+@media (min-width: 30rem) {
+	#form > form {
+		grid-template-rows: max-content;
+		grid-template-columns: max-content max-content;
+	}
+	#form > form > .form-col-left {
+		grid-column: 1 / span 1;
+	}
+	#form > form > .form-col-right {
+		grid-column: 2 / span 1;
+	}
+	#form > form > .form-col-both {
+		grid-column: 1 / span 2;
+	}
+	#form > form > label {
+		width: inherit;
+	}
+	#form > form > label.label-block.form-col-left > *,
+	#form > form > label.label-block.form-col-right > * {
+		width: min(50vw - 0.5*var(--form-field-gap), 20rem - 0.5*var(--form-field-gap));
+	}
+	#form > form > label.label-block.form-col-both > * {
+		width: min(100vw, 40rem);
 	}
 }

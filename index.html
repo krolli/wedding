@@ -81,6 +81,66 @@
 	</div>
 </section>
 
+<section id="form">
+	<h2>Formulář</h2>
+	<form method="post" action="https://script.google.com/macros/s/AKfycbyOwmYYmsCvKN2kt6SZRGDYI4boSwiXN-_o-1Z6R3A68_D_PzcDWcPNnpnBdhSiOVgC/exec" target="_blank">
+		<label class="label-block form-col-left">
+			Jméno:
+			<input name="firstName" type="text" required>
+		</label>
+		<label class="label-block form-col-right">
+			Příjmení:
+			<input name="lastName" type="text" required>
+		</label>
+
+		<fieldset class="form-col-both">
+			<legend>Účastním se:</legend>
+			<label><input type="radio" required name="willAttend" value="true">Ano</label>
+			<label><input type="radio" required name="willAttend" value="false">Ne</label>
+		</fieldset>
+
+		<label class="label-block form-col-left">
+			Kontaktní email:
+			<input name="contactEmail" type="email">
+		</label>
+		<label class="label-block form-col-right">
+			Kontaktní tel.:
+			<input name="contactPhone" type="tel" pattern="\+?[0-9 ]+">
+		</label>
+
+		<label class="label-block form-col-left">
+			Počet dospělých:
+			<input name="numAdults" type="number" min="1" value="1">
+		</label>
+		<label class="label-block form-col-right">
+			Počet dětí:
+			<input name="numChildren" type="number" min="0" value="0">
+		</label>
+
+		<fieldset class="form-col-both">
+			<legend>Mám zájem o ubytování:</legend>
+			<label><input type="radio" required name="wantAccomodation" value="true">Ano</label>
+			<label><input type="radio" required name="wantAccomodation" value="false">Ne</label>
+		</fieldset>
+
+		<label class="label-block form-col-left">
+			Ubytování od:
+			<input name="accomodationFrom" type="date" min="2024-04-01" max="2024-04-30" value="2024-04-13">
+		</label>
+		<label class="label-block form-col-right">
+			Počet noclehů:
+			<input name="numNights" type="number" min="1" value="1">
+		</label>
+
+		<label class="label-block form-col-both">
+			Otázky a připomínky (alergie, doprava):
+			<textarea name="extra" rows="3" cols="30"></textarea>
+		</label>
+
+		<input type="submit" value="Odeslat" class="form-col-both">
+	</form>
+</section>
+
 <div id="lightbox"></div>
 
 <script src="scripts.js"></script>
