@@ -96,6 +96,10 @@ section > h1,h2 {
 	flex-flow: column nowrap;
 	align-items: center;
 }
+#story em {
+	text-transform: uppercase;
+	font-style: normal;
+}
 .gallery {
 	max-width: var(--max-content-width);
 	display: flex;
