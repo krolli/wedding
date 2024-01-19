@@ -87,23 +87,43 @@ function onDocumentLoad(event) {
 		}
 	}
 
+	const formSection = document.getElementById('form');
+	const formStatus = document.getElementById('form-status');
+	const form = formSection.children[1];
+
 	function onFormSubmit(event) {
 		event.preventDefault();
 		event.submitter.disabled = true;
+
+		formStatus.classList.remove("hidden", "bi-circle");
+		formStatus.classList.remove("error", "bi-exclamation-circle-fill");
+		formStatus.classList.remove("success", "bi-check-circle-fill");
+		formStatus.classList.add("spin-before", "bi-arrow-repeat");
+		formStatus.innerHTML = "Odesílám";
 
 		const form = event.currentTarget;
 		const formData = new FormData(form);
 		const xhr = new XMLHttpRequest();
 		xhr.open('POST', form.action, true);
 
-		function asyncdone() {
+		function asyncSybmit_fulfilled() {
 			event.submitter.disabled = false;
+			formStatus.classList.remove("hidden", "bi-circle");
+			formStatus.classList.remove("error", "bi-exclamation-circle-fill");
+			formStatus.classList.add("success", "bi-check-circle-fill");
+			formStatus.classList.remove("spin-before", "bi-arrow-repeat");
+			formStatus.innerHTML = "Odesláno";
 		}
-		asyncRequest(xhr, formData).then(asyncdone, asyncdone);
+		function asyncSybmit_rejected() {
+			event.submitter.disabled = false;
+			formStatus.classList.remove("hidden", "bi-circle");
+			formStatus.classList.add("error", "bi-exclamation-circle-fill");
+			formStatus.classList.remove("success", "bi-check-circle-fill");
+			formStatus.classList.remove("spin-before", "bi-arrow-repeat");
+			formStatus.innerHTML = "Nezdařilo se";
+		}
+		asyncRequest(xhr, formData).then(asyncSybmit_fulfilled, asyncSybmit_rejected);
 	}
-
-	const formSection = document.getElementById('form');
-	const form = formSection.children[1];
 
 	function refreshFormFields() {
 		const willAttend = form.elements.willAttend.value === 'true';

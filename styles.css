@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
 :root {
 	--max-content-width: 950px;
 
@@ -11,6 +13,9 @@
 	--lighter-bg-color: var(--gradient-0);
 	--lighter-text-color: var(--gold-text);
 	--darker-bg-color: var(--gradient-1);
+
+	--error-fg-color: #FF0000;
+	--success-fg-color: #10B510;
 
 	/*
 	dimensions:
@@ -215,7 +220,7 @@ section > h1,h2 {
 	box-sizing: border-box;
 	width: min(100vw, 20rem);
 }
-#form > form > input[type=submit] {
+#form > form > input[type=submit], #form-status {
 	box-sizing: border-box;
 	width: min(100vw, 10rem);
 	justify-self: center;
@@ -246,5 +251,34 @@ section > h1,h2 {
 	}
 	#form > form > label.label-block.form-col-both > * {
 		width: min(100vw, 40rem);
+	}
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+.error {
+	color: var(--error-fg-color);
+}
+
+.success::before {
+	color: var(--success-fg-color);
+}
+
+.spin-before::before {
+	content: "\f130";
+	animation-name: spin;
+	animation-duration: 2000ms;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
 	}
 }
